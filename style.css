@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+	align-items: center;
+	background: #333;
+  color: #bbb;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
+h2 {
+  font-size: 4rem;
+  font-family: 'Shadows Into Light';
+}
+
+
+.border {
+	width: 80vw;
+	border-bottom: .2rem solid #bbb;
+	border-top: .2rem solid #bbb;
+	height: .2rem;
+}
+
+.stopwatch__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* button ==================*/
+.button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px solid;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+.button:hover {
+  background-color: #bbb;
+  color: #333;
+  border-color: #333;
+  transition: .6s;
+}
+
+.button:active {
+  box-shadow: inset 0 0 .5rem 0 #333;
+  transition: 0s;
+}
+
+/* stopwatch ===================*/
+.stopwatch {
+	width: 26rem;
+	height: 7rem;
+	text-align: center;
+	background: #222;
+	background-image: -webkit-linear-gradient(top, #222, #333, #333, #222); 
+	background-image:    -moz-linear-gradient(top, #222, #333, #333, #222);
+	background-image:     -ms-linear-gradient(top, #222, #333, #333, #222);
+	background-image:      -o-linear-gradient(top, #222, #333, #333, #222);
+	border: 1px solid #111;
+	border-radius: 5px;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  padding: 24px 0;
+  margin: 0 1rem 1rem 1rem;
+  position: relative;
+}
+
+.stopwatch:before{
+	content:"";
+	width: .5rem;
+	height: 4rem;
+	background: #444;
+	background-image: -webkit-linear-gradient(top, #555, #444, #444, #555); 
+	background-image:    -moz-linear-gradient(top, #555, #444, #444, #555);
+	background-image:     -ms-linear-gradient(top, #555, #444, #444, #555);
+	background-image:      -o-linear-gradient(top, #555, #444, #444, #555);
+	border: 1px solid #111;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	position: absolute;
+	top: 3rem; left: -.6rem;
+}
+
+.stopwatch:after{
+	content:"";
+	width: .5rem;
+	height: 4rem;
+	background: #444;
+	background-image: -webkit-linear-gradient(top, #555, #444, #444, #555); 
+	background-image:    -moz-linear-gradient(top, #555, #444, #444, #555);
+	background-image:     -ms-linear-gradient(top, #555, #444, #444, #555);
+	background-image:      -o-linear-gradient(top, #555, #444, #444, #555);
+	border: 1px solid #111;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	position: absolute;
+	top: 3rem; right: -.6rem;
+}
+
+/* stopwatch panels/tiles =================*/ 
+.stopwatch .timer > span{
+	width: 6rem;
+	max-width: 6rem;
+	font: bold 48px 'Droid Sans', Arial, sans-serif;
+	text-align: center;
+	color: #111;
+	background-color: #ddd;
+	background-image: -webkit-linear-gradient(top, #bbb, #eee); 
+	background-image:    -moz-linear-gradient(top, #bbb, #eee);
+	background-image:     -ms-linear-gradient(top, #bbb, #eee);
+	background-image:      -o-linear-gradient(top, #bbb, #eee);
+	border-top: 1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+	margin: 0 7px;
+	padding: 18px 0;
+	display: inline-block;
+	position: relative;
+}
+
+.stopwatch .timer > span:before{
+	content:"";
+	width: 100%;
+	height: 13px;
+	background: #111;
+	display: block;
+	padding: 0 3px;
+	position: absolute;
+	top: 41%; left: -3px;
+	z-index: -1;
+}
+
+.stopwatch .timer > span:after{
+	content:"";
+	width: 100%;
+	height: 1px;
+	background: #eee;
+	border-top: 1px solid #333;
+	display: block;
+	position: absolute;
+	top: 48%; left: 0;
+}
+
+
+/* stopwatch controls ================*/
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.stopwatch .controls div {
+  font: bold 15px 'Droid Sans', Arial, sans-serif;
+  padding: .5rem 0;
+	text-transform: uppercase;
+  cursor: pointer; 
+  flex: 0 0 20%;
+}
